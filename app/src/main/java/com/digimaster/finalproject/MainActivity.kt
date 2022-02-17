@@ -10,5 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        var id = intent.getStringExtra("id")
+        var name = intent.getStringExtra("name")
+        var email = intent.getStringExtra("email")
+        binding.tvUserEmail.text = "Email: $email"
+        binding.tvUserId.text = "userId: $id"
+        binding.tvUserName.text = "userName: $name"
+
     }
 }
