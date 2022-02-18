@@ -25,13 +25,8 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener{
             viewModel.postLogin(RequestLogin( binding.etUsername.text.toString(), binding.etPassword.text.toString()))
-//            val username = binding.etUsername.text.toString()
-//            val password = binding.etPassword.text.toString()
-//            Prefs.putString(PrefsKeys.USERNAME, username)
-//            Prefs.putString(PrefsKeys.PASSWORD, password)
-//            Prefs.putBoolean(PrefsKeys.IS_LOGIN, true)
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
+            Prefs.putBoolean(PrefsKeys.IS_LOGIN, true)
+
         }
         setObserver()
     }
